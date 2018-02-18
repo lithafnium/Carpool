@@ -164,3 +164,25 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+.profile{
+  height: 20%;
+  line-height: 20%;
+}
+.profile h4{
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.form-inline input{
+  margin: 10px;
+  width: 60% !important;
+}
+
+.form-inline button{
+  margin-left: 10px;
+  background-color: #A80A39 !important;
+  color: white;
+
+}
+

@@ -9,3 +9,23 @@ var config = {
 
 firebase.initializeApp(config);
 
+var user = firebase.auth().currentUser;
+
+// 
+console.log(user);
+var placeSearch, autocomplete;
+
+function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+    autocomplete = new google.maps.places.Autocomplete(
+/** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+     {types: ['geocode']});
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+}
+
+function initialize() {
+	initAutocomplete()
+}
