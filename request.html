@@ -40,6 +40,22 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
+  <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+
 </head>
 
 <body>
@@ -49,17 +65,28 @@
     <div class="menu-options">
       
     </div>
+
   </div>
-  <div class="container" id="main" style = "background-color: #202154; height: 100%;">
-    <div class="row">
-      <div class="col-md-12">
-        <h4>This is suppose to be in the main content</h4>
-      </div>
-    </div>
+  <div class="container" id="main" style = "background-color: #171036; height: 100%; margin: 0; padding: 0;">
+      
+              <form class="form-inline">
+                <input id = "autocomplete" class="form-control searchbar" type="text" placeholder="Enter your destination..."  aria-label="Search">
+                <button class="btn " type="submit">Give Rydes</button>
+
+               </form>
+                           <div id="map"></div>
+
+           
+        
+        
+
   </div>
 </body>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBONX2UEUhqJoBueIlbdw1oay74O8LAYiA&libraries=geometry,places&callback=initMap"
+type="text/javascript"></script>
+<script src = "js/request.js"></script>
 
 
 
-<script src = "js/users.js"></script>
+
 </html>

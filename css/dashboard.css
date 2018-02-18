@@ -10,7 +10,7 @@ body {
   font-family: verdana;
   font-size: 12px;
   font-weight: 200;
-  background-color: #171036;
+  background-color: #202154;
   position: fixed !important;
   top: 0px;
   width: 300px;
@@ -18,7 +18,7 @@ body {
   color: #e1ffff;
 }
 .nav-side-menu .brand {
-  background-color: #171036;
+  background-color: #202154;
   line-height: 50px;
   display: block;
   text-align: center;
