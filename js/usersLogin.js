@@ -1,4 +1,6 @@
 //Click Submit button
+
+
 document.getElementById('signinSubmit').addEventListener('click', function() {
 	signinEmail = document.getElementById('inputEmail').value
 	signinPassword = document.getElementById('inputPassword').value
@@ -11,6 +13,10 @@ document.getElementById('signinSubmit').addEventListener('click', function() {
 	  console.log("Failed login + REASON: " + errorMessage)
 	});
 	
+
+	
+
   	window.location.href = "dashboard.html";
 
-})
+});
+

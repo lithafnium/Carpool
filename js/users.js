@@ -1,5 +1,5 @@
-
-
+var name, email, uid;
+var database = firebase.database();
 //Click Submit button
 document.getElementById('submitButton').addEventListener('click', function() {
   	name = document.getElementById('inputName').value
@@ -14,6 +14,23 @@ document.getElementById('submitButton').addEventListener('click', function() {
 	  var errorMessage = error.message;
 	  // ...
 	});
+  	var user = firebase.auth().currentUser;
 
-})
+	if (user != null) {
+	 
+	  uid = user.uid;  
+	  writeUserData(uid, name, email); 
+	}
+	// window.location.href = "index.html";
+
+
+});
+
+function writeUserData(userId, name, email) {
+  firebase.database().ref('users/' + userId).set({
+    displayName: name,
+    email: email
+    
+  });
+}
 
