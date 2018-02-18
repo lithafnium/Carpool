@@ -39,7 +39,7 @@ body {
   line-height: 35px;
   cursor: pointer;
       
-    .collapsed{
+ /*   .collapsed{
        .arrow:before{
                  font-family: FontAwesome;
                  content: "\f053";
@@ -49,7 +49,7 @@ body {
                  vertical-align: middle;
                  float:right;
             }
-     }
+     }*/
 
 }
 .nav-side-menu ul :not(collapsed) .arrow:before,
@@ -104,6 +104,7 @@ body {
 .nav-side-menu li a {
   text-decoration: none;
   color: #e1ffff;
+  padding-left: 10px;
 }
 .nav-side-menu li a i {
   padding-left: 10px;
