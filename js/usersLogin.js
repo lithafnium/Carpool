@@ -1,10 +1,3 @@
-//log out existing user
-firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}, function(error) {
-  // An error happened.
-});
-
 //Click Submit button
 document.getElementById('signinSubmit').addEventListener('click', function() {
 	signinEmail = document.getElementById('inputEmail').value

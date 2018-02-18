@@ -21,7 +21,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 	  uid = user.uid;  
 	  writeUserData(uid, name, email); 
 	}
-	window.location.href = "index.html";
+	window.location.href = "dashboard.html";
 
 
 });
@@ -34,9 +34,3 @@ function writeUserData(userId, name, email) {
   });
 }
 
-//log out existing user
-firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}, function(error) {
-  // An error happened.
-});
