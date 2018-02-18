@@ -1,3 +1,5 @@
+firebase.auth().signOut()
+
 var name, email, uid;
 var database = firebase.database();
 //Click Submit button
@@ -12,19 +14,30 @@ document.getElementById('submitButton').addEventListener('click', function() {
 	  // Handle Errors here.
 	  var errorCode = error.code;
 	  var errorMessage = error.message;
+	  console.log("Failed Signup + REASON: " + errorMessage)
+
 	  // ...
 	});
-  	var user = firebase.auth().currentUser;
 
-	if (user != null) {
-	 
-	  uid = user.uid;  
-	  writeUserData(uid, name, email); 
-	}
-	window.location.href = "dashboard.html";
+  	firebase.auth().onAuthStateChanged(function(user){
+		if(user){
+			var user = firebase.auth().currentUser;
+	  		console.log(user); 
 
+		
+		 
+		  uid = user.uid;  
+		  writeUserData(uid, name, email);
+		}
+		else{
 
+		}
+	});
+	 // window.location.href = "receive.html";
+
+  	
 });
+
 
 function writeUserData(userId, name, email) {
   firebase.database().ref('users/' + userId).set({
@@ -33,4 +46,7 @@ function writeUserData(userId, name, email) {
     
   });
 }
+
+
+
 
