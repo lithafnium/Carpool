@@ -1,9 +1,9 @@
 //Click Submit button
 document.getElementById('signinSubmit').addEventListener('click', function() {
-	signinEmail = document.getElementById('signinEmail').value
-	signinPassword = document.getElementById('signinPassword').value
+	signinEmail = document.getElementById('inputEmail').value
+	signinPassword = document.getElementById('inputPassword').value
 
-  	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  	firebase.auth().signInWithEmailAndPassword(signinEmail, signinPassword).catch(function(error) {
 	  // Handle Errors here.
 	  var errorCode = error.code;
 	  var errorMessage = error.message;
@@ -11,6 +11,6 @@ document.getElementById('signinSubmit').addEventListener('click', function() {
 	  console.log("Failed login + REASON: " + errorMessage)
 	});
 	
-  	window.location.href = "../dashboard.html";
+  	window.location.href = "dashboard.html";
 
 })
