@@ -14,7 +14,7 @@ document.getElementById('signinSubmit').addEventListener('click', function() {
 
 	
 
-  	window.location.href = "dashboard.html";
+  	window.location.href = "request.html";
 
 });
 

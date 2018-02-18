@@ -47,7 +47,7 @@ function writeUserData(userId, name, email) {
     displayName: name,
     email: email
     
-  });
+  }, false);
 }
 
 

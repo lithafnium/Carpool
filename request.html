@@ -21,6 +21,7 @@
 
 
 
+
   <!-- Bootstrap -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
@@ -39,6 +40,10 @@
   <!-- JQuery + Popper.js -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <link href="css/bootstrap-clockpicker.min.css" rel="stylesheet">
+  <script src= "js/bootstrap-clockpicker.min.js"></script>
+
 
   <style>
       /* Always set the map height explicitly to define the size of the div
@@ -70,11 +75,21 @@
   <div class="container" id="main" style = "background-color: #171036; height: 100%; margin: 0; padding: 0;">
       
               <form class="form-inline">
-                <input id = "autocomplete" class="form-control searchbar" type="text" placeholder="Enter your destination..."  aria-label="Search">
-                <button class="btn " type="submit">Give Rydes</button>
+                 <input id = "autocomplete" class="form-control searchbar" type="text" placeholder="Enter your destination..."  aria-label="Search">
 
-               </form>
-                           <div id="map"></div>
+                <div class="input-group clockpicker" style = "padding-left: 0px; padding-right: 0px; padding-bottom: 10px;"data-placement="bottom" data-align="top" data-autoclose="true">
+                    <input type="text" id = "timepicker" class="form-control" value="Choose arrival time">
+                </div>
+                <script type="text/javascript">
+                $('.clockpicker').clockpicker();
+                </script>
+
+                
+                <button class = "btn" onclick="sendRequest()">Request Rydes</div>
+
+
+                </form>
+                          <div id="map"></div>
 
            
         
