@@ -189,7 +189,13 @@ function sendRequest() {
     //      }
 
     //  });
-    useruid = "NpEMZWnBNihVNjiKTjggADEcoX03"
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        console.log(user.uid);
+        useruid = user.uid
+      }
+    });
+    //useruid = "NpEMZWnBNihVNjiKTjggADEcoX03"
     //var user = firebase.auth().currentUser;
     not_location = "272 Virginia Farme Ln Carlisle MA 01741"
     console.log("1 " + not_location)
@@ -239,9 +245,6 @@ function fillInAddress() {
 
 
 function writeUserLocData(userId, coords, arrival) {
-    while(false) {
-        console.log("b")
-    }
   firebase.database().ref('requests/' + userId).set({
 
     destination: coords,
