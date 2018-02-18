@@ -1,10 +1,3 @@
-//log out existing user
-firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}, function(error) {
-  // An error happened.
-});
-
 var name, email, uid;
 var database = firebase.database();
 //Click Submit button
@@ -41,3 +34,9 @@ function writeUserData(userId, name, email) {
   });
 }
 
+//log out existing user
+firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+}, function(error) {
+  // An error happened.
+});
