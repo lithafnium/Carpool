@@ -6,6 +6,8 @@
 html,
 body {
   height: 100%;
+  font-family: 'Fira Sans', sans-serif;
+
 }
 
 body {
@@ -104,3 +106,5 @@ body {
 	margin-top: 20px !important;
 	color: white;
 }
+
+

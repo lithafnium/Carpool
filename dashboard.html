@@ -1,0 +1,107 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- <link rel="icon" href="../../../../favicon.ico"> -->
+
+  <title>Ryde – Blueprint 2018</title>
+  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-database.js"></script>
+
+  <script src="js/script.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
+
+
+
+  <!-- Bootstrap -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+  <!-- JQuery + Popper.js -->
+ <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ -->
+  <!-- Custom styles for this template -->
+  <link href="css/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="nav-side-menu">
+    <div class="brand"><img style = "width: 50%; height: 50%", src = "ryde_logo.png"></div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <div class="menu-list">
+      <ul id="menu-content" class="menu-content collapse out">
+        <li>
+          <a href="#">
+            <i class="fa fa-dashboard fa-lg"></i> Dashboard
+          </a>
+        </li>
+        <li data-toggle="collapse" data-target="#products" class="collapsed active">
+          <a href="#"><i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span></a>
+        </li>
+        <ul class="sub-menu collapse" id="products">
+          <li class="active"><a href="#">CSS3 Animation</a></li>
+          <li><a href="#">General</a></li>
+          <li><a href="#">Buttons</a></li>
+          <li><a href="#">Tabs &amp; Accordions</a></li>
+          <li><a href="#">Typography</a></li>
+          <li><a href="#">FontAwesome</a></li>
+          <li><a href="#">Slider</a></li>
+          <li><a href="#">Panels</a></li>
+          <li><a href="#">Widgets</a></li>
+          <li><a href="#">Bootstrap Model</a></li>
+        </ul>
+        <li data-toggle="collapse" data-target="#service" class="collapsed">
+          <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
+        </li>
+        <ul class="sub-menu collapse" id="service">
+          <li>New Service 1</li>
+          <li>New Service 2</li>
+          <li>New Service 3</li>
+        </ul>
+
+
+        <li data-toggle="collapse" data-target="#new" class="collapsed">
+          <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+        </li>
+        <ul class="sub-menu collapse" id="new">
+          <li>New New 1</li>
+          <li>New New 2</li>
+          <li>New New 3</li>
+        </ul>
+        <li>
+          <a href="#">
+            <i class="fa fa-user fa-lg"></i> Profile
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-users fa-lg"></i> Users
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container" id="main">
+    <div class="row">
+      <div class="col-md-12">
+        <h4>This is suppose to be in the main content</h4>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+<script src = "js/users.js"></script>
+</html>
