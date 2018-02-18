@@ -21,7 +21,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 	  uid = user.uid;  
 	  writeUserData(uid, name, email); 
 	}
-	// window.location.href = "index.html";
+	window.location.href = "index.html";
 
 
 });
