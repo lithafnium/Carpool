@@ -24,10 +24,13 @@ document.getElementById('submitButton').addEventListener('click', function() {
 			var user = firebase.auth().currentUser;
 	  		console.log(user); 
 
+
 		
 		 
 		  uid = user.uid;  
 		  writeUserData(uid, name, email);
+		  	window.location.href = "request.html";
+
 		}
 		else{
 
