@@ -10,11 +10,21 @@ document.getElementById('signinSubmit').addEventListener('click', function() {
 	  // ...
 	  console.log("Failed login + REASON: " + errorMessage)
 	});
+
+	firebase.auth().onAuthStateChanged(function(user) {
+ 		if(user !== null){
+ 			window.location.href = "request.html";
+
+ 		}
+ 		else{
+ 			var wrongEmail = document.getElementById('incorrectEmail'); 
+ 			wrongEmail.style.display = "block"
+ 		}
+	});
 	
 
 	
 
-  	window.location.href = "request.html";
 
 });
 
