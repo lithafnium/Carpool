@@ -1,4 +1,3 @@
-firebase.auth().signOut()
 
 var name, email, uid;
 var database = firebase.database();

@@ -46,31 +46,26 @@
         <img style = "width: 40%; height: 40%", src = "ryde_logo.png">
     </div>
 
-    <ul class="list-unstyled components">
-      <p>Dummy Heading</p>
-      <li class="active">
-        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
-        <ul class="collapse list-unstyled" id="homeSubmenu">
-          <li><a href="#">Home 1</a></li>
-          <li><a href="#">Home 2</a></li>
-          <li><a href="#">Home 3</a></li>
-        </ul>
+    <ul id = "menu" class="list-unstyled components">
+      <p id = "currentUser"> User </p>
+      <li class="navLink">
+         <a href="#homeSubmenu"  class = "scrollTo">Requests</a>
       </li>
-      <li>
-        <a href="#">About</a>
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-        <ul class="collapse list-unstyled" id="pageSubmenu">
-          <li><a href="#">Page 1</a></li>
-          <li><a href="#">Page 2</a></li>
-          <li><a href="#">Page 3</a></li>
-        </ul>
+      <li class="navLink">
+
+        <a href="#" class = "scrollTo">Profile</a>
+
       </li>
-      <li>
-        <a href="#">Portfolio</a>
+      <li class="navLink">
+        <a href="#pageSubmenu" class = "scrollTo" >Settings</a>
+
       </li>
-      <li>
+      <!-- <li>
+        <a href="#">Requests</a>
+      </li> -->
+      <!-- <li>
         <a href="#">Contact</a>
-      </li>
+      </li> -->
     </ul>
 
 
@@ -100,6 +95,17 @@ async defer></script>
    $('#sidebarCollapse').on('click', function () {
      $('#sidebar').toggleClass('active');
    });
+   if(firebase.auth().currentUser){
+      document.getElementById("currentUser").innerHTML = firebase.auth().currentUser.uid
+   } else document.getElementById("currentUser").innerHTML = "User"
+
+ });
+
+ $(function(){
+  $('.navLink').click(function(){
+    $("#menu > li").removeClass("active"); 
+    $(this).addClass('active'); 
+  })
  });
 </script>
 </body>

@@ -36,6 +36,10 @@ body {
     align-items: stretch;
 }
 
+.sidebar-header img{
+  display: block; 
+  margin: auto;
+}
 #sidebar {
     min-width: 250px;
     max-width: 250px;
