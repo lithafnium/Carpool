@@ -9,13 +9,14 @@
   <!-- <link rel="icon" href="../../../../favicon.ico"> -->
 
   <title>Ryde – Blueprint 2018</title>
-  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
 
   <script src="js/script.js"></script>
+
 
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400" rel="stylesheet">
 
@@ -49,7 +50,7 @@
     <ul id = "menu" class="list-unstyled components">
       <p id = "currentUser"> User </p>
       <li class="navLink">
-         <a href="#homeSubmenu"  class = "scrollTo">Requests</a>
+         <a href="request.html"  class = "scrollTo">Requests</a>
       </li>
       <li class="navLink">
 
@@ -60,6 +61,7 @@
         <a href="#pageSubmenu" class = "scrollTo" >Settings</a>
 
       </li>
+      
       <!-- <li>
         <a href="#">Requests</a>
       </li> -->
@@ -91,13 +93,10 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDNGE0_gOFq0YbFjSB9OxtdwBcHSRm5_s&libraries=geometry,places&callback=initialize"
 async defer></script>
 <script type="text/javascript">
+ 
  $(document).ready(function () {
-   $('#sidebarCollapse').on('click', function () {
-     $('#sidebar').toggleClass('active');
-   });
-   if(firebase.auth().currentUser){
-      document.getElementById("currentUser").innerHTML = firebase.auth().currentUser.uid
-   } else document.getElementById("currentUser").innerHTML = "User"
+   
+   
 
  });
 
@@ -108,6 +107,8 @@ async defer></script>
   })
  });
 </script>
+<script src="js/dashboard.js"></script>
+
 </body>
 
 

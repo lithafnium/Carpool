@@ -1,44 +1,33 @@
 //Click Submit button
-firebase.auth().signOut()
+firebase.auth().signOut();
 
 document.getElementById('signinSubmit').addEventListener('click', function() {
+	console.log("clicked"); 
+	signinEmail = document.getElementById('inputEmail').value;
+	signinPassword = document.getElementById('inputPassword').value;
 
-	signinEmail = document.getElementById('inputEmail').value
-	signinPassword = document.getElementById('inputPassword').value
-
-	firebase.auth().signInWithEmailAndPassword(signinEmail, signinPassword).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  // ...
-	  console.log("Failed login + REASON: " + errorMessage + " CODE: " + errorCode)
-	});
-	// console.log("asdf")
-
-
-	//var user = firebase.auth().currentUser;
-	
-
-	firebase.auth().onAuthStateChanged(function(user) {
 	var wrongEmail = document.getElementById('incorrectEmail'); 
+	user = firebase.auth().currentUser; 
+	console.log(user);
+ 	firebase.auth().signInWithEmailAndPassword(signinEmail,signinPassword).then(function(){
+   		console.log("redirect")
+  		 wrongEmail.style.display = "none";
+  		window.location.href = "dashboard.html"; 
+	}).catch(function(error) {
+  		var errorCode = error.code;
+ 		var errorMessage = error.message;
+  
+  		console.log("Failed login + REASON: " + errorMessage + " CODE: " + errorCode)
+  		console.log("NULL"); 
+  		wrongEmail.style.display = "block"
+});
 
-		console.log(user)
 
-		if(user){
-			console.log("change screen")
-			wrongEmail.style.display = "none"
-
-	 		window.location.href = "request.html";
-
-	 		}
-	 		else{
-	 			wrongEmail.style.display = "block"
-	 		}
- 	});
-
-	
 
 
 });
+
+
+
 
 
